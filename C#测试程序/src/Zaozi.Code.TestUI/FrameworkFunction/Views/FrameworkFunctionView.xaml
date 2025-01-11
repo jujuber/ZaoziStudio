@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Zaozi.Code.TestUI.FrameworkFunction.Views.FrameworkFunctionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Zaozi.Code.TestUI.FrameworkFunction.Views"
+             xmlns:vm="clr-namespace:Zaozi.Code.TestUI.FrameworkFunction.ViewModels"
+             d:DataContext="{d:DesignInstance {x:Type vm:FrameworkFunctionViewModel}}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="入参"/>
+                <TextBox Grid.Column="1" Text="{Binding InputText}" VerticalAlignment="Stretch" TextWrapping="Wrap" Margin="5"/>
+            </Grid>
+        </Border>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Margin="5" Content="获取ip" Command="{Binding GetIpCommand}"/>
+            <Button Margin="5" Content="获取mac" Command="{Binding GetMacCommand}"/>
+        </StackPanel>
+        <Border Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="出参"/>
+                <TextBox Grid.Column="1" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding OutputText}" Margin="5"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

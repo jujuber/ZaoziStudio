@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Zaozi.Code.TestUI.Crypto.Views.CryptoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Zaozi.Code.TestUI.Crypto.Views"
+             xmlns:vm="clr-namespace:Zaozi.Code.TestUI.Crypto.ViewModels"
+             d:DataContext="{d:DesignInstance {x:Type vm:CryptoViewModel}}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Margin="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions> 
+            <TextBlock Text="入参" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Text="{Binding InputText}" VerticalAlignment="Stretch" TextWrapping="Wrap" Margin="5"/>
+            <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Button Margin="5" Content="MD5加密" Command="{Binding Md5Command}" Padding="5" VerticalAlignment="Center"/>
+                <Button Margin="5" Content="移动医保返回解密" Command="{Binding Ydybesm4DecCommand}" Padding="5" VerticalAlignment="Center"/>
+                <Button Margin="5" Content="sm2加密" Command="{Binding SM2EncCommand}"/>
+                <Button Margin="5" Content="sm2解密" Command="{Binding SM2DecCommand}"/>
+            </StackPanel>
+            <TextBlock Grid.Row="2" Text="出参" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox  Grid.Row="2" Grid.Column="1" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding OutputText}" Margin="5"/>
+        </Grid>
+    </Border>
+</UserControl>
