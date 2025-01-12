@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Synyi.Zaozi.WriteThing.Model;
 
-public class SynyiLog
+public class KzzqrmyyYqjcLog
 {
     [SugarColumn(IsPrimaryKey = true)]
     public long Id { get; set; }

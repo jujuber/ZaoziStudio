@@ -20,7 +20,7 @@ public class WriteLogController : ControllerBase
 
         //long id = db.Insertable(实体).ExecuteReturnSnowflakeId();//单条插入返回雪花ID
 
-        await dBHelper.SqlDB.Insertable(new SynyiLog()
+        await dBHelper.SqlDB.Insertable(new KzzqrmyyYqjcLog()
         {
             LogText = value.Log,
             CreateTime = DateTime.Now
@@ -34,7 +34,7 @@ public class WriteLogController : ControllerBase
     {
         DBHelper dBHelper = new DBHelper(Configuration);
 
-        dBHelper.SqlDB.CodeFirst.SetStringDefaultLength(200).InitTables(typeof(SynyiLog));
+        dBHelper.SqlDB.CodeFirst.SetStringDefaultLength(200).InitTables(typeof(KzzqrmyyYqjcLog));
 
         return Ok("建表成功");
     }
@@ -49,7 +49,7 @@ public class WriteLogController : ControllerBase
 
         DBHelper dBHelper = new DBHelper(Configuration);
 
-        await dBHelper.SqlDB.Insertable(new SynyiLog()
+        await dBHelper.SqlDB.Insertable(new KzzqrmyyYqjcLog()
         {
             LogText = logText,
             CreateTime = DateTime.Now
