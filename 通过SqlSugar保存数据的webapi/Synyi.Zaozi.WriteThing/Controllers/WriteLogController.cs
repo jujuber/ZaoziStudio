@@ -40,9 +40,9 @@ public class WriteLogController : ControllerBase
     }
 
     [HttpPost("WriteString")]
-    public async Task<ActionResult> WriteString([FromBody] string logText)
+    public async Task<ActionResult> WriteString([FromBody] object logText)
     {
-        if (string.IsNullOrEmpty(logText))
+        if (logText == null)
         {
             return BadRequest("日志内容不能为空");
         }
@@ -51,7 +51,7 @@ public class WriteLogController : ControllerBase
 
         await dBHelper.SqlDB.Insertable(new KzzqrmyyYqjcLog()
         {
-            LogText = logText,
+            LogText = $"{logText}",
             CreateTime = DateTime.Now
         }).ExecuteReturnSnowflakeIdAsync();
 
