@@ -23,7 +23,8 @@
             <TextBox Grid.Column="1" Text="{Binding InputText}" VerticalAlignment="Stretch" TextWrapping="Wrap" Margin="5"/>
             <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
                 <Button Margin="5" Content="MD5加密" Command="{Binding Md5Command}" Padding="5" VerticalAlignment="Center"/>
-                <Button Margin="5" Content="移动医保返回解密" Command="{Binding Ydybesm4DecCommand}" Padding="5" VerticalAlignment="Center"/>
+                <Button Margin="5" Content="移动医保返回解密6202交易" Command="{Binding Ydybesm4DecCommand}" Padding="5" VerticalAlignment="Center"/>
+                <Button Margin="5" Content="移动医保返回解密6203交易" Command="{Binding Ydybesm4Dec6203Command}" Padding="5" VerticalAlignment="Center"/>
                 <Button Margin="5" Content="sm2加密" Command="{Binding SM2EncCommand}"/>
                 <Button Margin="5" Content="sm2解密" Command="{Binding SM2DecCommand}"/>
             </StackPanel>

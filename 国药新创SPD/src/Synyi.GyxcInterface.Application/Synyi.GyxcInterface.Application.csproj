@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$([MSBuild]::GetPathOfFileAbove('DesktopLint.ruleset'))</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;0019</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;0019</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Synyi.Framework.Kernel" Version="3.0.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Synyi.GyxcInterface.Application.Abstractions\Synyi.GyxcInterface.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\Synyi.GyxcInterface.Domain\Synyi.GyxcInterface.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

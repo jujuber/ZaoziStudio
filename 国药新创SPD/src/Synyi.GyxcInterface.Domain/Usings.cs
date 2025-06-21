@@ -1,0 +1,16 @@
+﻿global using Microsoft.EntityFrameworkCore;
+global using System.ComponentModel;
+global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using Synyi.Framework.Kernel;
+global using Synyi.Framework.Kernel.Functions;
+global using Synyi.Framework.Kernel.Ioc;
+global using Synyi.Framework.Kernel.Modularity;
+global using Synyi.Framework.Data;
+global using Synyi.Framework.Domain;
+global using Synyi.Framework.Domain.Entities;
+global using Synyi.Framework.Domain.Entities.Auditing;
+global using Synyi.Framework.EntityFramework;
+global using Synyi.Framework.EntityFramework.Attributes;
+global using Synyi.Framework.EntityFramework.Modularity;
+global using System.Diagnostics.CodeAnalysis; 

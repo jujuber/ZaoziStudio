@@ -57,4 +57,51 @@ public class WriteLogController : ControllerBase
 
         return Ok("保存成功");
     }
+    /// <summary>
+    /// 方法入参 标注了 FromRoute后，要在特性中体现
+    /// </summary>
+    /// <param name="username"></param>
+    /// <returns></returns>
+    [HttpPost("{username}/getpatname")]
+    public Task<string> TestRoute([FromRoute] string username, int age  )
+    {
+        var result  = new {username,age };
+
+        var temp = Newtonsoft.Json.JsonConvert.SerializeObject(result);
+
+        return Task.FromResult(temp);
+         
+    }
+    /// <summary>
+    /// 方法入参 标注了 FromQuery username=xx&&age=1
+    /// </summary>
+    /// <param name="username"></param>
+    /// <returns></returns>
+    [HttpPost("TestQuery")]
+    public Task<string> TestQuery([FromQuery] string username, int age)
+    {
+        var result = new { username, age };
+
+        var temp = Newtonsoft.Json.JsonConvert.SerializeObject(result);
+
+        return Task.FromResult(temp);
+
+    }
+
+    /// <summary>
+    /// 方法入参 标注了 FromQuery username=xx&&age=1
+    /// </summary>
+    /// <param name="username"></param>
+    /// <returns></returns>
+    [HttpPost("TestForm")]
+    public Task<string> TestForm([FromForm] string username, [FromForm] int age)
+    {
+        var result = new { username, age };
+
+        var temp = Newtonsoft.Json.JsonConvert.SerializeObject(result);
+
+        return Task.FromResult(temp);
+
+    }
+
 }

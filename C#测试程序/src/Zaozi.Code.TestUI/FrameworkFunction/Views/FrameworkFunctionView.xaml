@@ -27,6 +27,11 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Button Margin="5" Content="获取ip" Command="{Binding GetIpCommand}"/>
             <Button Margin="5" Content="获取mac" Command="{Binding GetMacCommand}"/>
+            <Button Margin="5" Content="decimaltoint" Command="{Binding ToIntCommand}"/>
+            <Button Margin="5" Content="Json" Command="{Binding JsonCommand}"/>
+            <Button Margin="5" Content="入参日期=>年龄" Command="{Binding CalcAge1Command}"/>
+            <Button Margin="5" Content="Json" Command="{Binding CalcAge2Command}"/>
+            <Button Margin="5" Content="Json" Command="{Binding CalcAge3Command}"/>
         </StackPanel>
         <Border Grid.Row="2">
             <Grid>

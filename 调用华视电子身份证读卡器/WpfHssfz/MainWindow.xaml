@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfHssfz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHssfz" 
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="600">
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="姓名"/>
+            <TextBox Grid.Column="1" Text="{Binding Data.Name}"/>
+
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="性别"/>
+            <TextBox Grid.Column="3" Text="{Binding Data.Gender}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="民族"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Data.Folk}" />
+
+            <TextBlock Grid.Row="1" Grid.Column="2" Text="出生日期"/>
+            <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Data.BirthDay}" />
+            
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="身份证号"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Data.Code}"/>
+            
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="地址"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Text="usb端口" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding IUsbPort}" VerticalAlignment="Center" />
+            <Button Margin="5" Content=" 读  取 " Command="{Binding ReadCommand}"/>
+            <Button Margin="5" Content=" 读  取 华视电子 " Command="{Binding ReadCRVCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

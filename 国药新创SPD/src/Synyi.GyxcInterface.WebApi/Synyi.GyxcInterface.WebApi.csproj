@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$([MSBuild]::GetPathOfFileAbove('DesktopLint.ruleset'))</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latestMajor</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConfigureAwait.Fody" Version="3.3.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Synyi.Framework.AspNet" Version="3.0.6" />
+    <PackageReference Include="Synyi.Framework.Kernel" Version="3.0.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Synyi.GyxcInterface.Application.Abstractions\Synyi.GyxcInterface.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\Synyi.GyxcInterface.Application\Synyi.GyxcInterface.Application.csproj" />
+    <ProjectReference Include="..\Synyi.GyxcInterface.Domain\Synyi.GyxcInterface.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

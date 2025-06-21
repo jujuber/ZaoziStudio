@@ -29,6 +29,7 @@ public class WorkstationViewModel : PluginViewModelBase
                 this.Create(ZaoziConst.Plugins.XmlToObjView,"Xml转换为对象","&#xe7d4;"),
                 this.Create(ZaoziConst.Plugins.CryptoView,"加解密","&#xe7d4;"),
                 this.Create(ZaoziConst.Plugins.FrameworkFunctionView,"框架方法","&#xe7d4;"),
+                this.Create(ZaoziConst.Plugins.WebApiTestView,"WebApi测试","&#xe7d4;"),
             };
         } 
         return Task.CompletedTask;

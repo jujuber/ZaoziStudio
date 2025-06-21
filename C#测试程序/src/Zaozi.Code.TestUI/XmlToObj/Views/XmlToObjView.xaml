@@ -10,6 +10,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Button Command="{Binding XmlCommand}" Content="转换" Height="60" Width="160"/>
+        <wpf:DropDownBox Grid.Row="1" BorderThickness="0,0,0,1" Background="Transparent">
+            
+        </wpf:DropDownBox>
+        <wpf:NumberBox Grid.Row="2" BorderThickness="0,0,0,1">
+            
+        </wpf:NumberBox>
     </Grid>
 </UserControl>

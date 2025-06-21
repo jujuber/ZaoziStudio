@@ -31,8 +31,8 @@
     </PackageReference>
     <PackageReference Include="ConfigureAwait.Fody" Version="3.3.2" />
     <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
-    <PackageReference Include="Synyi.Framework.Kernel" Version="3.0.23" />
-    <PackageReference Include="Synyi.Framework.Wpf" Version="3.0.16" />
+    <PackageReference Include="Synyi.Framework.Kernel" Version="3.0.24" />
+    <PackageReference Include="Synyi.Framework.Wpf" Version="3.0.17" />
   </ItemGroup>
  
 

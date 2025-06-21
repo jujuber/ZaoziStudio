@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$([MSBuild]::GetPathOfFileAbove('DesktopLint.ruleset'))</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Description>应用程序更新程序</Description>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latestMajor</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
+      <IncludeAssets>none</IncludeAssets>
+      <PrivateAssets>none</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="ConfigureAwait.Fody" Version="3.3.2" />
+    <PackageReference Include="Synyi.Framework.Data" Version="3.1.12" />
+    <PackageReference Include="Synyi.Framework.Domain" Version="3.0.10" />
+    <PackageReference Include="Synyi.Framework.EntityFramework" Version="3.1.5" />
+    <PackageReference Include="Synyi.Framework.Kernel" Version="3.0.23" />
+  </ItemGroup>
+
+</Project>

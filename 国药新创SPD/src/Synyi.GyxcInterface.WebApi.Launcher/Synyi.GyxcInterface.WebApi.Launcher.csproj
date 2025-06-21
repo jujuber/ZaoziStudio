@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.1" />
+    <PackageReference Include="Synyi.Framework.Application" Version="3.2.5" />
+    <PackageReference Include="Synyi.Framework.AspNet" Version="3.0.6" />
+    <PackageReference Include="Synyi.Framework.Data" Version="3.1.14" />
+    <PackageReference Include="Synyi.Framework.Domain" Version="3.0.10" />
+    <PackageReference Include="Synyi.Framework.EntityFramework" Version="3.1.5" />
+    <PackageReference Include="Synyi.Framework.Kernel" Version="3.0.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Synyi.GyxcInterface.Application.Abstractions\Synyi.GyxcInterface.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\Synyi.GyxcInterface.Application\Synyi.GyxcInterface.Application.csproj" />
+    <ProjectReference Include="..\Synyi.GyxcInterface.Domain\Synyi.GyxcInterface.Domain.csproj" />
+    <ProjectReference Include="..\Synyi.GyxcInterface.WebApi\Synyi.GyxcInterface.WebApi.csproj" />
+  </ItemGroup>
+
+</Project>

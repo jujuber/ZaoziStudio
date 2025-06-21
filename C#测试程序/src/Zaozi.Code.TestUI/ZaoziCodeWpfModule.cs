@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebApiTest.ViewModels;
+using WebApiTest.Views;
 using Zaozi.Code.TestUI.Crypto.ViewModels;
 using Zaozi.Code.TestUI.Crypto.Views;
 using Zaozi.Code.TestUI.FrameworkFunction.ViewModels;
@@ -31,5 +33,6 @@ public class ZaoziCodeWpfModule : WpfModuleBase
         registrar.Register<CryptoView, CryptoViewModel>();
         registrar.Register<FrameworkFunctionView, FrameworkFunctionViewModel>();
         registrar.Register<TestAllSingleView, TestAllSingleViewModel>();
+        registrar.Register<WebApiTestView, WebApiTestViewModel>();
     }
 }

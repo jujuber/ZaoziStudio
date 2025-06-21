@@ -48,5 +48,9 @@ public static class ZaoziConst
         /// 综合测试
         /// </summary>
         public const string TestAllSingleView = "/ZaoziCode/Manage/TestAllSingleView";
+        /// <summary>
+        /// WebApi测试
+        /// </summary>
+        public const string WebApiTestView = "/ZaoziCode/Manage/WebApiTestView";
     }
 }

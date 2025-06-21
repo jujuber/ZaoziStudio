@@ -15,8 +15,10 @@
         </Grid.RowDefinitions>
         <TextBox Text="{Binding EdtValue}" 
             TextWrapping="Wrap" VerticalAlignment="Stretch" Margin="5" HorizontalAlignment="Stretch"/>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Left">
-            <Button Content="Yeild测试" Command="{Binding YieldCommand}"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button Margin="3" Content="Yeild测试" Command="{Binding YieldCommand}"/>
+            <Button Margin="3" Content="ValueTuple测试" Command="{Binding ValueTupleCommand}"/>
+            
         </StackPanel>
     </Grid>
 </UserControl>

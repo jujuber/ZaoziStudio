@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synyi.GyxcInterface.WebApi.Launcher", "src\Synyi.GyxcInterface.WebApi.Launcher\Synyi.GyxcInterface.WebApi.Launcher.csproj", "{DCA0F2C0-0783-40C2-9710-EE5589236A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synyi.GyxcInterface.WebApi", "src\Synyi.GyxcInterface.WebApi\Synyi.GyxcInterface.WebApi.csproj", "{ADF44810-E304-4DD2-B9D8-D020CEBD171F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synyi.GyxcInterface.Domain", "src\Synyi.GyxcInterface.Domain\Synyi.GyxcInterface.Domain.csproj", "{AF0BC0E0-4BF0-4A57-BBF8-C589E44ADE1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synyi.GyxcInterface.Application.Abstractions", "src\Synyi.GyxcInterface.Application.Abstractions\Synyi.GyxcInterface.Application.Abstractions.csproj", "{4A773CB5-1D7C-4236-8008-C678D7712D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synyi.GyxcInterface.Application", "src\Synyi.GyxcInterface.Application\Synyi.GyxcInterface.Application.csproj", "{EA002804-943F-4CD0-A7AA-7A99EDD2F09F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCA0F2C0-0783-40C2-9710-EE5589236A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA0F2C0-0783-40C2-9710-EE5589236A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA0F2C0-0783-40C2-9710-EE5589236A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA0F2C0-0783-40C2-9710-EE5589236A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF44810-E304-4DD2-B9D8-D020CEBD171F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF44810-E304-4DD2-B9D8-D020CEBD171F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF44810-E304-4DD2-B9D8-D020CEBD171F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF44810-E304-4DD2-B9D8-D020CEBD171F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF0BC0E0-4BF0-4A57-BBF8-C589E44ADE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0BC0E0-4BF0-4A57-BBF8-C589E44ADE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0BC0E0-4BF0-4A57-BBF8-C589E44ADE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0BC0E0-4BF0-4A57-BBF8-C589E44ADE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A773CB5-1D7C-4236-8008-C678D7712D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A773CB5-1D7C-4236-8008-C678D7712D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A773CB5-1D7C-4236-8008-C678D7712D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A773CB5-1D7C-4236-8008-C678D7712D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA002804-943F-4CD0-A7AA-7A99EDD2F09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA002804-943F-4CD0-A7AA-7A99EDD2F09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA002804-943F-4CD0-A7AA-7A99EDD2F09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA002804-943F-4CD0-A7AA-7A99EDD2F09F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

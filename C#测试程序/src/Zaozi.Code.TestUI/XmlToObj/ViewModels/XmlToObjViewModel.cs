@@ -2,12 +2,14 @@
 using Synyi.Framework.Wpf.Plugins;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace Zaozi.Code.TestUI.XmlToObj.ViewModels
@@ -32,16 +34,20 @@ namespace Zaozi.Code.TestUI.XmlToObj.ViewModels
                 "<prm_akc021>2</prm_akc021>" +
                 "<prm_ykc010>" +
                 "<row>" +
-                "<akb020>3</akb020>" +
+                "<akb020>0</akb020>" +
                 "<yab003>4</yab003>" +
                 "</row>" +
                 "<row>" +
-                "<akb020>5</akb020>" +
+                "<akb020>3</akb020>" +
                 "<yab003>6</yab003>" +
-                "</row>" + 
-                "</prm_ykc010>" +
+                "</row>" +
+            "</prm_ykc010>" +
                 "</output>";
-            XmlObj obj = XmlDeserialize<XmlObj>(xml);
+            //XDocument xdoc = XDocument.Parse(xml);
+            // XmlObj root = xdoc.Root.ToObject<XmlObj>();
+          //  var obj = XmlHelper.XmlDeserialize<XmlObj>(xml);
+            // XmlObj obj = XmlDeserialize<XmlObj>(xml);
+            var str = XmlHelper.XmlToJson(xml);
         }
 
         public static T XmlDeserialize<T>(string sMsg)
@@ -77,7 +83,8 @@ namespace Zaozi.Code.TestUI.XmlToObj.ViewModels
     }
     public class XmlObj2
     {
-        public string akb020 { get; set; }
+        [XmlElement(IsNullable = true)]
+        public decimal? akb020 { get; set; }
         public string yab003 { get; set; }
     }
 }

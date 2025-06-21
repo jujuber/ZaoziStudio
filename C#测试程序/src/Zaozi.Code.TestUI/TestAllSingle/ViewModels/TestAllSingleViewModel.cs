@@ -18,6 +18,7 @@ public class TestAllSingleViewModel : PluginViewModelBase
     public TestAllSingleViewModel()
     {
         this.YieldCommand = new ActionCommand(this.ExecuteYieldCommand);
+        this.ValueTupleCommand = new ActionCommand(this.ExecuteValueTupleCommand);
     }
 
     public string EdtValue { get; set; }
@@ -31,6 +32,24 @@ public class TestAllSingleViewModel : PluginViewModelBase
         {
             EdtValue += $"{item}{Environment.NewLine}";
         }
+    }
+    public ActionCommand ValueTupleCommand { get; }
+
+    private void ExecuteValueTupleCommand()
+    {
+        var p1 = Getparams();
+        var p2 = GetTuple(p1);
+        EdtValue = p2;
+    }
+
+    public string GetTuple(ValueTuple<string,string> input)
+    { 
+        return $"inputEnc:{input.Item1},inputDec:{input.Item2}";
+    }
+
+    public (string inputEnc,string inputDec) Getparams()
+    {
+        return ("inputEnc", "inputDec");
     }
     private IEnumerable<int> GetEnumers(int num)
     {
